@@ -30,7 +30,11 @@ export default {
         <!-- hero center -->
         <div class="hero__center">
             <div class="container">
-                <h2>testo</h2>
+                <div class="text-container">
+                    <h2>find the best aminal supplies</h2>
+                    <h3>We know animals are a part of your family, let us help take care of them.</h3>
+                    <button>Learn more about us</button>
+                </div>
             </div>
         </div>
         <!-- hero bottom -->
@@ -82,13 +86,36 @@ export default {
 }
 
 .hero__center {
-    @include flex-center;
     background-image: url('src/img/banner-5-2x-scaled.jpg');
     background-size: cover;
 
     .container {
         padding-top: 200px;
         padding-bottom: 200px;
+
+        .text-container {
+            @include flex-col;
+            align-items: flex-start;
+            max-width: 50%;
+            gap: 50px;
+
+            h2 {
+                @include title-1-uppercase
+            }
+
+            h3 {
+                @include title-1
+            }
+
+            button {
+                color: $dark;
+                background-color: $bright;
+                @include txt-1;
+                border-radius: 50px;
+                border: none;
+                padding: 15px 30px;
+            }
+        }
     }
 }
 

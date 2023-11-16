@@ -6,6 +6,11 @@
     align-items: center;
 }
 
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
 // text
 @mixin menu-txt {
     font-size: 12px;
@@ -26,5 +31,11 @@
 @mixin title-1 {
     font-family: 'Lora', serif;
     font-size: 52px;
-    font-weight: 600px;
+    font-weight: 400;
+}
+
+@mixin title-1-uppercase {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
 }
