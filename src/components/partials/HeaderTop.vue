@@ -13,12 +13,16 @@ export default {
         <div class="header-top">
             <div class="header-info">
                 <div class="col">
-                    <img src="src/img/dark-pet-logo.png" alt="" class="logo">
+                    <figure class="logo">
+                        <img src="src/img/dark-pet-logo.png" alt="">
+                    </figure>
                 </div>
-                <div class="col">
-                    <input type="search">
+                <div class="col search-bar">
+                    <div class="search-container">
+                        <input type="search">
+                        <font-awesome-icon icon="magnifying-glass" class="search-icon" />
+                    </div>
                 </div>
-
                 <div class="col">
                     <span>Questions?</span>
                     <span>Call us: 123.456.7890</span>
@@ -35,31 +39,46 @@ export default {
 <style lang="scss" scoped>
 @use 'src/style/partials/variables.scss' as *;
 
-.page-header {
-    background-color: #3161e0;
-    color: white;
-    padding: 14px 0;
-}
-
 .header-top {
     max-height: 70px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 0;
-
+    padding: 25px 0;
 }
 
 .header-info {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 80%;
+    gap: 10px;
+    flex-grow: 1;
 
-    .logo {
-        display: block;
-        max-height: fit-content;
-        height: auto;
+    .search-bar {
+        // flex-grow: 1;
+        display: flex;
+        align-items: center;
+    }
+
+    .search-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    input {
+        flex-grow: 1;
+        border: 0.5px solid $grey0;
+        padding: 10px;
+        border-radius: 25px;
+    }
+
+    .search-icon {
+        position: absolute;
+        left: 10px;
+        color: $grey0;
     }
 }
 </style>
