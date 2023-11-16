@@ -1,6 +1,14 @@
 // utility
 @mixin flex-center {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -9,4 +17,15 @@
     font-size: 12px;
     font-weight: 600;
     color: $grey0;
+}
+
+@mixin txt-1 {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+@mixin title-1 {
+    font-family: 'Lora', serif;
+    font-size: 52px;
+    font-weight: 600px;
 }
