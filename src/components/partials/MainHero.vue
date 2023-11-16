@@ -10,9 +10,10 @@ export default {
 
 <template>
     <div class="hero-section">
+        <!-- hero top -->
         <div class="hero__top">
             <div class="container">
-                <div class="col">
+                <div cla ss="col">
                     <font-awesome-icon class="icon" icon="fa-regular fa-map" />
                     <span><b>International</b> Shipping Services</span>
                 </div>
@@ -26,13 +27,21 @@ export default {
                 </div>
             </div>
         </div>
+        <!-- hero center -->
         <div class="hero__center">
             <div class="container">
                 <h2>testo</h2>
             </div>
         </div>
+        <!-- hero bottom -->
         <div class="hero__bottom">
-            <div class="container"></div>
+            <div class="container">
+                <img src="src/img/food-transparent-5-400x223.png" alt="">
+                <div class="text-container">
+                    <p class="text"><b>Get 25$ OFF your first purchase of our homemade pet food!</b></p>
+                    <a href="#" class="link">Visit the shop</a>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -51,15 +60,20 @@ export default {
     margin-right: 5px;
 }
 
-.hero__top {
-    @include flex-center;
+.hero__top,
+.hero__bottom {
     background-image: url('src/img/bg-transparent-3.png');
     background-repeat: repeat;
-    min-height: 60px;
+}
+
+.hero__top {
+    padding: 20px 0;
 
     .container {
-        @include flex-center;
-        gap: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
 
         span {
             @include txt-1;
@@ -75,6 +89,31 @@ export default {
     .container {
         padding-top: 200px;
         padding-bottom: 200px;
+    }
+}
+
+.hero__bottom {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+
+        img {
+            width: 140px;
+            // vertical-align: middle;
+        }
+
+        .text-container {
+            @include txt-2;
+            @include flex-center;
+            gap: 15px;
+            padding: 60px;
+
+            .link {
+                text-decoration: underline;
+            }
+        }
+
     }
 }
 </style>

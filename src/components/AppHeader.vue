@@ -17,8 +17,16 @@ export default {
 <template>
     <header>
         <HeaderTop />
-        <HeaderNav />
+        <div class="header-nav">
+            <HeaderNav />
+        </div>
     </header>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+@use 'src/style/partials/variables.scss' as *;
+
+.header-nav {
+    border-top: 1px solid $grey2;
+}
+</style>

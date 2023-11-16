@@ -6,12 +6,6 @@
     align-items: center;
 }
 
-@mixin flex-between {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 // text
 @mixin menu-txt {
     font-size: 12px;
@@ -21,6 +15,11 @@
 
 @mixin txt-1 {
     font-size: 12px;
+    font-weight: 400;
+}
+
+@mixin txt-2 {
+    font-size: 18px;
     font-weight: 400;
 }
 

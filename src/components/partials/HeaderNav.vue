@@ -26,10 +26,10 @@ export default {
 @use 'src/style/partials/variables.scss' as *;
 @import 'src/style/partials/mixins.scss';
 
+
 .nav-menu {
     display: flex;
     @include flex-center;
-    border-top: 1px solid $grey2;
 
     a {
         @include menu-txt;
