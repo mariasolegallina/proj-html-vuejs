@@ -8,13 +8,12 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 // /* import solid icons */
-import { } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import { faBasketShopping } from '@fortawesome/free-solid-svg-icons'
+import { faUser } from '@fortawesome/free-solid-svg-icons'
 // /* import regular icons */
 import { } from '@fortawesome/free-regular-svg-icons'
 
-
 // /* add icons to the library */
-library.add()
-
-
+library.add(faAngleDown, faBasketShopping, faUser)
 createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app')

@@ -1,0 +1,12 @@
+// utility
+@mixin flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+// text
+@mixin menu-txt {
+    font-size: 12px;
+    font-weight: 600;
+    color: $grey0;
+}
