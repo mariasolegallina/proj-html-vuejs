@@ -66,8 +66,7 @@ export default {
 
 .hero__top,
 .hero__bottom {
-    background-image: url('src/img/bg-transparent-3.png');
-    background-repeat: repeat;
+    @include bg-green-pattern;
 }
 
 .hero__top {
@@ -108,12 +107,7 @@ export default {
             }
 
             button {
-                color: $dark;
-                background-color: $bright;
-                @include txt-1;
-                border-radius: 50px;
-                border: none;
-                padding: 15px 30px;
+                @include bright-btn;
             }
         }
     }

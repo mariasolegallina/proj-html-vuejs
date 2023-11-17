@@ -38,6 +38,7 @@ export default {
   
 <style lang="scss" scoped>
 @use 'src/style/partials/variables.scss' as *;
+@import 'src/style/partials/mixins.scss';
 
 .header-top {
     max-height: 70px;
@@ -69,10 +70,8 @@ export default {
     }
 
     input {
-        flex-grow: 1;
         border: 0.5px solid $grey0;
-        padding: 10px;
-        border-radius: 25px;
+        @include input;
     }
 
     .search-icon {

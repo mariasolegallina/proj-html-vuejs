@@ -38,7 +38,11 @@ export default {
                         <li><a href="#">Bed</a></li>
                     </ul>
                 </div>
-                <div class="form">4</div>
+                <div class="col form">
+                    <div class="title">Subscribe to our newsletter</div>
+                    <input type="text">
+                    <button>Subscribe</button>
+                </div>
             </div>
         </div>
         <div class="container">
@@ -76,6 +80,11 @@ footer {
         @include flex-col;
         gap: 30px;
 
+        .title {
+            @include txt-2;
+            line-height: 28px;
+        }
+
         .logo {
             max-width: 80%;
 
@@ -86,14 +95,24 @@ footer {
             line-height: 24px;
         }
 
-        .title {
-            @include txt-2;
-        }
-
         ul {
             @include txt-1;
             @include flex-col;
-            gap: 30px;
+            gap: 26px;
+        }
+    }
+
+    .form {
+        @include bg-mgreen-pattern;
+        border-radius: 6px;
+        padding: 28px 34px;
+
+        input {
+            @include input;
+        }
+
+        button {
+            @include lgreen-btn;
         }
     }
 }
@@ -104,10 +123,10 @@ footer {
     li {
         @include menu-txt;
         padding: 12px;
-    }
 
-    li:hover {
-        color: $bright;
+        &:hover {
+            color: $bright;
+        }
     }
 }
 </style>
