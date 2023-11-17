@@ -1,22 +1,23 @@
 <script>
 
 export default {
+    props: ['headerMenu'],
     data() {
         return {
+
         }
     },
-}
+    mounted() {
+        // console.log('prova', this.headerMenu)
+    }
+}  
 </script>
 
 <template>
     <nav class="container">
         <ul class="nav-menu">
-            <li class="nav-menu__item"><a href="#">Home<font-awesome-icon class="arrow" icon="angle-down" /></a></li>
-            <li class="nav-menu__item"><a href="#">Shop<font-awesome-icon class="arrow" icon="angle-down" /></a></li>
-            <li class="nav-menu__item"><a href="#">About</a></li>
-            <li class="nav-menu__item"><a href="#">Blog</a></li>
-            <li class="nav-menu__item"><a href="#">Contact</a></li>
-            <li class="nav-menu__item"><a href="#">Shop by brand<font-awesome-icon class="arrow" icon="angle-down" /></a>
+            <li v-for="(menuItem, index) in headerMenu" :key=index class="nav-menu__item"><a href="#">{{ menuItem.name
+            }}<font-awesome-icon v-if="menuItem.arrow === true" class="arrow" icon="angle-down" /></a>
             </li>
         </ul>
     </nav>

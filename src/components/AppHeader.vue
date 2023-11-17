@@ -9,6 +9,33 @@ export default {
     },
     data() {
         return {
+            menuItems: [
+                {
+                    name: "Home",
+                    arrow: true
+                },
+                {
+                    name: "Shop",
+                    arrow: true
+                },
+                {
+                    name: "About",
+                    arrow: false
+                },
+                {
+                    name: "Blog",
+                    arrow: false
+                },
+                {
+                    name: "Contact",
+                    arrow: false
+                },
+                {
+                    name: "Shop by brand",
+                    arrow: true
+                }
+            ],
+
         }
     },
 }
@@ -18,7 +45,7 @@ export default {
     <header>
         <HeaderTop />
         <div class="header-nav">
-            <HeaderNav />
+            <HeaderNav :headerMenu="menuItems" />
         </div>
     </header>
 </template>
