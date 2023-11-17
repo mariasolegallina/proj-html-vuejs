@@ -11,6 +11,64 @@ export default {
   },
   data() {
     return {
+      fListItems1: [
+        {
+          name: "Bed",
+          link: '#',
+        },
+        {
+          name: "Food",
+          link: '#',
+        },
+        {
+          name: "Toys",
+          link: '#',
+        },
+        {
+          name: "Transport",
+          link: '#',
+        },
+      ],
+      fListItems2: [
+        {
+          name: "My account",
+          link: '#',
+        },
+        {
+          name: "Orders",
+          link: '#',
+        },
+        {
+          name: "Checkout",
+          link: '#',
+        },
+        {
+          name: "Cart",
+          link: '#',
+        },
+      ],
+      fMenu: [
+        {
+          name: "Home",
+          link: '#',
+        },
+        {
+          name: "About",
+          link: '#',
+        },
+        {
+          name: "Blog",
+          link: '#',
+        },
+        {
+          name: "Contact",
+          link: '#',
+        },
+        {
+          name: "Shop",
+          link: '#',
+        },
+      ],
 
     }
   }
@@ -21,7 +79,7 @@ export default {
 <template>
   <AppHeader />
   <AppMain />
-  <AppFooter />
+  <AppFooter :footerList1="fListItems1" :footerList2="fListItems2" :footerMenu="fMenu" />
 </template>
 
 <style lang="scss">

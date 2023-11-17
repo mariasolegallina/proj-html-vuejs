@@ -1,8 +1,10 @@
 <script>
 
 export default {
+    props: ['footerList1', 'footerList2', 'footerMenu'],
     data() {
         return {
+
         }
     },
 }
@@ -23,19 +25,15 @@ export default {
                 <div class="col">
                     <div class="title">Shop by brand</div>
                     <ul>
-                        <li><a href="#">Bed</a></li>
-                        <li><a href="#">Bed</a></li>
-                        <li><a href="#">Bed</a></li>
-                        <li><a href="#">Bed</a></li>
+                        <li v-for="(listItem1, index) in footerList1" :key=index><a :href="listItem1.link">{{ listItem1.name
+                        }}</a></li>
                     </ul>
                 </div>
                 <div class="col">
                     <div class="title">Useful links</div>
                     <ul>
-                        <li><a href="#">Bed</a></li>
-                        <li><a href="#">Bed</a></li>
-                        <li><a href="#">Bed</a></li>
-                        <li><a href="#">Bed</a></li>
+                        <li v-for="(listItem2, index) in footerList2" :key=index><a :href="listItem2.link">{{ listItem2.name
+                        }}</a></li>
                     </ul>
                 </div>
                 <div class="col form">
@@ -48,11 +46,8 @@ export default {
         <div class="container">
             <nav>
                 <ul class="footer-menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Home</a></li>
+                    <li v-for="(footerMenuItem, index) in footerMenu" :key=index><a :href="footerMenuItem.link">{{
+                        footerMenuItem.name }}</a></li>
 
                 </ul>
             </nav>
