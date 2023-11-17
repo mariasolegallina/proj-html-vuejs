@@ -10,28 +10,17 @@ export default {
 
 <template>
     <div class="container">
-        <div class="header-top">
-            <div class="header-info">
-                <div class="col">
-                    <figure class="logo">
-                        <img src="src/img/dark-pet-logo.png" alt="">
-                    </figure>
-                </div>
-                <div class="col search-bar">
-                    <div class="search-container">
-                        <input type="search">
-                        <font-awesome-icon icon="magnifying-glass" class="search-icon" />
-                    </div>
-                </div>
-                <div class="col">
-                    <span>Questions?</span>
-                    <span>Call us: 123.456.7890</span>
-                </div>
+        <div class="header-info">
+            <img class="logo" src="src/img/dark-pet-logo.png" alt="">
+            <div class="searchbar">
+                <input type="search">
+                <font-awesome-icon icon="magnifying-glass" class="search-icon" />
             </div>
-            <div class="header-icons">
-                <font-awesome-icon icon="basket-shopping" />
-                <font-awesome-icon icon="user" />
-            </div>
+            <h5 class="text"><span>Questions?</span> Call us: 123.456.7890</h5>
+        </div>
+        <div class="icons">
+            <font-awesome-icon icon="basket-shopping" />
+            <font-awesome-icon icon="user" />
         </div>
     </div>
 </template>
@@ -40,44 +29,47 @@ export default {
 @use 'src/style/partials/variables.scss' as *;
 @import 'src/style/partials/mixins.scss';
 
-.header-top {
-    max-height: 70px;
+.container {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     justify-content: space-between;
-    padding: 25px 0;
-}
-
-.header-info {
-    display: flex;
     align-items: center;
-    justify-content: space-between;
-    max-width: 80%;
-    gap: 10px;
-    flex-grow: 1;
+    @include menu-txt;
 
-    .search-bar {
-        // flex-grow: 1;
+    .header-info {
         display: flex;
+        justify-content: space-between;
         align-items: center;
+        flex-basis: 75%;
+        padding: 12px;
+
+        .searchbar {
+            position: relative;
+            display: flex;
+            align-items: center;
+            min-width: 30%;
+
+            input {
+                @include input;
+                background-color: $grey2;
+                max-widthth: 370px;
+            }
+
+            .search-icon {
+                position: absolute;
+                left: 10px;
+            }
+        }
+
+        .text {
+            span {
+                font-weight: 800;
+            }
+        }
     }
 
-    .search-container {
-        position: relative;
-        display: flex;
-        align-items: center;
-    }
-
-    input {
-        border: 0.5px solid $grey0;
-        @include input;
-    }
-
-    .search-icon {
-        position: absolute;
-        left: 10px;
-        color: $grey0;
+    .icons {
+        @include flex-center;
+        gap: 15px;
     }
 }
 </style>

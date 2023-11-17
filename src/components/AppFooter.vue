@@ -57,7 +57,6 @@ export default {
                 <li><a href="#"><font-awesome-icon icon="fa-regular fa-map" /></a></li>
                 <li><a href="#"><font-awesome-icon icon="fa-regular fa-map" /></a></li>
             </ul>
-
         </div>
     </footer>
 </template>
