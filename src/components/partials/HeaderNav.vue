@@ -16,7 +16,8 @@ export default {
 <template>
     <nav class="container">
         <ul class="nav-menu">
-            <li v-for="(menuItem, index) in headerMenu" :key=index class="nav-menu__item"><a href="#">{{ menuItem.name
+            <li v-for="(menuItem, index) in  headerMenu " :key=index class="nav-menu__item"><a :href="menuItem.link">{{
+                menuItem.name
             }}<font-awesome-icon v-if="menuItem.arrow === true" class="arrow" icon="angle-down" /></a>
             </li>
         </ul>

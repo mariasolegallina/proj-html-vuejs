@@ -12,30 +12,35 @@ export default {
             menuItems: [
                 {
                     name: "Home",
+                    link: '#',
                     arrow: true
                 },
                 {
                     name: "Shop",
+                    link: '#',
                     arrow: true
                 },
                 {
                     name: "About",
+                    link: '#',
                     arrow: false
                 },
                 {
                     name: "Blog",
+                    link: '#',
                     arrow: false
                 },
                 {
                     name: "Contact",
+                    link: '#',
                     arrow: false
                 },
                 {
                     name: "Shop by brand",
+                    link: '#',
                     arrow: true
                 }
             ],
-
         }
     },
 }
