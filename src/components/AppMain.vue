@@ -1,11 +1,15 @@
 <script>
 import MainHero from './partials/MainHero.vue';
 import MainSqGallery4 from './partials/MainSqGallery4.vue';
+import MainBgGallery from './partials/MainBgGallery.vue';
+import MainBanner from './partials/MainBanner.vue';
 
 export default {
     components: {
         MainHero,
         MainSqGallery4,
+        MainBgGallery,
+        MainBanner,
     },
     data() {
         return {
@@ -15,7 +19,7 @@ export default {
                 items: [
                     {
                         name: 'Bed',
-                        img: 'src/img/product-2-400x400.jpg',
+                        img: 'src/img/product-9-400x400.jpg',
                         link: '#',
                         products: ['cuccia'],
                     },
@@ -27,13 +31,13 @@ export default {
                     },
                     {
                         name: 'Toys',
-                        img: 'src/img/product-4-400x400.jpg',
+                        img: 'src/img/product-2-400x400.jpg',
                         link: '#',
                         products: ['palla', 'ramo', 'osso', 'ruota', 'ciabatta', 'tappeto'],
                     },
                     {
-                        name: 'Toys',
-                        img: 'src/img/product-9-400x400.jpg',
+                        name: 'Transport',
+                        img: 'src/img/product-4-400x400.jpg',
                         link: '#',
                         products: ['borsa', 'trasportino', 'guinzaglio'],
                     },
@@ -48,6 +52,8 @@ export default {
 <template>
     <MainHero />
     <MainSqGallery4 :categories="prodCategories" />
+    <MainBgGallery />
+    <MainBanner />
 </template>
 
 <style lang="scss" scoped></style>

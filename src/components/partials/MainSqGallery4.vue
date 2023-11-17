@@ -14,7 +14,7 @@ export default {
         <div class="container">
             <div class="text">
                 <div class="title">{{ categories.title }}</div>
-                <div class="subtitle">{{ categories.title }}</div>
+                <div class="subtitle">{{ categories.subtitle }}</div>
             </div>
             <div class="products">
                 <div v-for="(category, index) in categories.items" :key="index" class="col">
