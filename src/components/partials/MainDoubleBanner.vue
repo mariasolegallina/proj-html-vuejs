@@ -63,6 +63,7 @@ export default {
     .banner {
         color: $bright;
         background-size: cover;
+        background-position: center;
         padding: 140px 0;
         @include flex-col;
         flex-grow: 1;

@@ -4,6 +4,7 @@ import MainSqGallery4 from './partials/MainSqGallery4.vue';
 import MainBgGallery from './partials/MainBgGallery.vue';
 import MainBanner from './partials/MainBanner.vue';
 import MainDoubleBanner from './partials/MainDoubleBanner.vue';
+import MainSqGallery3 from './partials/MainSqGallery3.vue';
 
 
 export default {
@@ -13,6 +14,7 @@ export default {
         MainBgGallery,
         MainBanner,
         MainDoubleBanner,
+        MainSqGallery3,
     },
     data() {
         return {
@@ -46,6 +48,50 @@ export default {
                     },
                 ],
             },
+            productsInfo: {
+                title: 'New products arrival',
+                subtitle: 'Latest products',
+                items: [
+                    {
+                        name: 'Colored Bed',
+                        img: 'src/img/newarrival/product-8-400x400.jpg',
+                        price: '$18.00',
+                        newPrice: ''
+                    },
+                    {
+                        name: 'Colorful ball set',
+                        img: 'src/img/newarrival/product-2-400x400.jpg',
+                        price: '$29.00',
+                        newPrice: ''
+                    },
+                    {
+                        name: 'Dog bone',
+                        img: 'src/img/newarrival/product-3-400x400.jpg',
+                        price: '$29.00',
+                        newPrice: '$18.00'
+                    },
+                    {
+                        name: 'Animal transport bag',
+                        img: 'src/img/newarrival/product-4-400x400.jpg',
+                        price: '$29.00',
+                        newPrice: ''
+                    },
+                    {
+                        name: 'Animal transport cage',
+                        img: 'src/img/newarrival/product-5-400x400.jpg',
+                        price: '$35.00',
+                        newPrice: ''
+                    },
+                    {
+                        name: 'Closable cat litter',
+                        img: 'src/img/newarrival/product-10-400x400.jpg',
+                        price: '$16.00',
+                        newPrice: ''
+                    },
+
+                ],
+            },
+
         }
     },
 
@@ -58,6 +104,7 @@ export default {
     <MainBgGallery />
     <MainBanner />
     <MainDoubleBanner />
+    <MainSqGallery3 :newProducts="productsInfo" />
 </template>
 
 <style lang="scss" scoped></style>
