@@ -1,9 +1,11 @@
 <script>
 import MainHero from './partials/MainHero.vue';
+import MainSqGallery4 from './partials/MainSqGallery4.vue';
 
 export default {
     components: {
         MainHero,
+        MainSqGallery4,
     },
     data() {
         return {
@@ -15,6 +17,7 @@ export default {
 
 <template>
     <MainHero />
+    <MainSqGallery4 />
 </template>
 
 <style lang="scss" scoped></style>
