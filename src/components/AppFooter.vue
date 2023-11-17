@@ -13,14 +13,31 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <img src="src/img/mobile-light-pet-logo-2x-400x105.png" alt="">
+                    <img class="logo" src="src/img/mobile-light-pet-logo-2x-400x105.png" alt="">
                     <div class="address">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias impedit explicabo.
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias impedit explicabo. Alias impedit
+                        explicabo.
 
                     </div>
                 </div>
-                <div class="col">2</div>
-                <div class="col">3</div>
+                <div class="col">
+                    <div class="title">Shop by brand</div>
+                    <ul>
+                        <li><a href="#">Bed</a></li>
+                        <li><a href="#">Bed</a></li>
+                        <li><a href="#">Bed</a></li>
+                        <li><a href="#">Bed</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <div class="title">Useful links</div>
+                    <ul>
+                        <li><a href="#">Bed</a></li>
+                        <li><a href="#">Bed</a></li>
+                        <li><a href="#">Bed</a></li>
+                        <li><a href="#">Bed</a></li>
+                    </ul>
+                </div>
                 <div class="form">4</div>
             </div>
         </div>
@@ -58,6 +75,26 @@ footer {
     .col {
         @include flex-col;
         gap: 30px;
+
+        .logo {
+            max-width: 80%;
+
+        }
+
+        .address {
+            @include txt-1;
+            line-height: 24px;
+        }
+
+        .title {
+            @include txt-2;
+        }
+
+        ul {
+            @include txt-1;
+            @include flex-col;
+            gap: 30px;
+        }
     }
 }
 
