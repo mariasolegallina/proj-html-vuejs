@@ -9,7 +9,7 @@ export default {
 </script>
 
 <template>
-    <footer>
+    <footer class="section">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -56,6 +56,12 @@ export default {
 
                 </ul>
             </nav>
+            <ul class="social-icon">
+                <li><a href="#"><font-awesome-icon icon="fa-regular fa-map" /></a></li>
+                <li><a href="#"><font-awesome-icon icon="fa-regular fa-map" /></a></li>
+                <li><a href="#"><font-awesome-icon icon="fa-regular fa-map" /></a></li>
+                <li><a href="#"><font-awesome-icon icon="fa-regular fa-map" /></a></li>
+            </ul>
 
         </div>
     </footer>
@@ -68,7 +74,15 @@ export default {
 footer {
     color: $bright;
     background-color: $dark-green;
-    padding: 120px 0;
+}
+
+.container {
+    padding-top: 54px;
+    padding-bottom: 54px;
+
+    &:not(:first-child) {
+        border-top: 0.5px $bright solid;
+    }
 }
 
 .row {
@@ -123,10 +137,20 @@ footer {
     li {
         @include menu-txt;
         padding: 12px;
+        color: $grey1;
 
         &:hover {
             color: $bright;
         }
+    }
+}
+
+.social-icon {
+    @include flex-center;
+
+    li {
+        padding: 12px;
+        color: $bright;
     }
 }
 </style>
