@@ -3,6 +3,8 @@ import MainHero from './partials/MainHero.vue';
 import MainSqGallery4 from './partials/MainSqGallery4.vue';
 import MainBgGallery from './partials/MainBgGallery.vue';
 import MainBanner from './partials/MainBanner.vue';
+import MainDoubleBanner from './partials/MainDoubleBanner.vue';
+
 
 export default {
     components: {
@@ -10,6 +12,7 @@ export default {
         MainSqGallery4,
         MainBgGallery,
         MainBanner,
+        MainDoubleBanner,
     },
     data() {
         return {
@@ -54,6 +57,7 @@ export default {
     <MainSqGallery4 :categories="prodCategories" />
     <MainBgGallery />
     <MainBanner />
+    <MainDoubleBanner />
 </template>
 
 <style lang="scss" scoped></style>

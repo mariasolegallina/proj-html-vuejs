@@ -1,28 +1,32 @@
 <script>
 
 export default {
+
     data() {
         return {
         }
     },
+
 }
 </script>
 
 <template>
     <div class="section">
         <div class="container">
-            <h2>find the best aminal supplies</h2>
-            <h3>New arrivals weekly</h3>
-            <button>Learn more about us</button>
+            <div class="banner">
+                <h2>find the best aminal supplies</h2>
+                <h3>New arrivals weekly</h3>
+                <button>Learn more about us</button>
+            </div>
         </div>
     </div>
 </template>
-  
+
 <style lang="scss" scoped>
 @use 'src/style/partials/variables.scss' as *;
 @import 'src/style/partials/mixins.scss';
 
-.container {
+.banner {
     color: $bright;
     background-image: url(src/img/banner-3-2x-scaled.jpg);
     background-size: cover;
