@@ -57,6 +57,7 @@ export default {
 .hero-section {
     color: $bright;
     background-color: $dark-green;
+    margin-bottom: 54px;
 }
 
 .icon {

@@ -1,6 +1,7 @@
 <script>
 
 export default {
+    props: ['categories'],
     data() {
         return {
         }
@@ -12,30 +13,17 @@ export default {
     <div class="section">
         <div class="container">
             <div class="text">
-                <div class="title">Browse by category</div>
-                <div class="subtitle">Lorem ipsum dolor sit, amet consectetur adipisicing commodi rem asperiores, ipsam
-                    vitae omnis esse ratione illum nisi quia. Libero, eum!</div>
+                <div class="title">{{ categories.title }}</div>
+                <div class="subtitle">{{ categories.title }}</div>
             </div>
             <div class="products">
-                <div class="col">
-                    <figure>
-                        <img src="src/img/product-9-400x400.jpg" alt="">
+                <div v-for="(category, index) in categories.items" :key="index" class="col">
+                    <figure><a :href="category.link">
+                            <img :src="category.img" alt="">
+                        </a>
                     </figure>
-                </div>
-                <div class="col">
-                    <figure>
-                        <img src="src/img/product-9-400x400.jpg" alt="">
-                    </figure>
-                </div>
-                <div class="col">
-                    <figure>
-                        <img src="src/img/product-9-400x400.jpg" alt="">
-                    </figure>
-                </div>
-                <div class="col">
-                    <figure>
-                        <img src="src/img/product-9-400x400.jpg" alt="">
-                    </figure>
+                    <h6 class="category"><a :href="category.link">{{ category.name }} ({{ category.products.length }})</a>
+                    </h6>
                 </div>
             </div>
 
@@ -48,12 +36,23 @@ export default {
 @import 'src/style/partials/mixins.scss';
 
 .container {
-    padding-top: 54px;
-    padding-bottom: 54px;
+    @include flex-col;
+    align-items: center;
 }
 
 .text {
     @include flex-col;
+    max-width: 50%;
+    text-align: center;
+    margin-bottom: 54px;
+
+    .title {
+        @include title-2;
+    }
+
+    .subtitle {
+        @include txt-1;
+    }
 }
 
 .products {
@@ -61,8 +60,22 @@ export default {
     grid-template-columns: repeat(4, 1fr);
     gap: 12px;
 
-    .figure {
-        aspect-ratio: 1;
+    .col {
+
+        .figure {
+            aspect-ratio: 1;
+
+            img {
+                object-fit: cover;
+            }
+        }
+
+        .category {
+            @include txt-2;
+            text-align: center;
+            padding: 16px;
+        }
+
     }
 }
 </style>

@@ -21,17 +21,28 @@
 @mixin txt-1 {
     font-size: 12px;
     font-weight: 400;
+    line-height: 22px;
+
 }
 
 @mixin txt-2 {
     font-size: 18px;
     font-weight: 400;
+
 }
 
 @mixin title-1 {
     font-family: 'Lora', serif;
     font-size: 52px;
     font-weight: 400;
+}
+
+@mixin title-2 {
+    font-family: 'Lora', serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 74px;
+
 }
 
 @mixin title-1-uppercase {
@@ -82,5 +93,5 @@
     @include txt-1;
     border-radius: 50px;
     border: none;
-    padding: 15px 30px;
+    padding: 10px 30px;
 }
